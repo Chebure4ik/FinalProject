@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ХОД ИГРОКА САНЯ"
+        android:gravity="center"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/questionsOut"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_example"
+        android:text="Вопрос:"
+        android:textSize="19sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/firstOption"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#FFAB00"
+        android:text="1-Й ВАРИАНТ"
+        app:layout_constraintBottom_toTopOf="@+id/secondOption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/secondOption"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="#FF6D00"
+        android:text="2-Й ВАРИАНТ"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionsOut" />
+
+    <Button
+        android:id="@+id/thirdOption"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:text="3-Й ВАРИАНТ"
+        android:backgroundTint="#DD2C00"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondOption" />
+</androidx.constraintlayout.widget.ConstraintLayout>
