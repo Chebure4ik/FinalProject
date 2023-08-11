@@ -7,52 +7,13 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ВЫБЕРИТЕ КОЛИЧЕСТВО ИГРОКОВ"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        android:layout_marginTop="180dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/twoPlayerButton"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:text="2 игрока"
-        android:textSize="17sp"
-        android:backgroundTint="#FFAB00"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/threePlayerButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/threePlayerButton"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:text="3 игрока"
-        android:textSize="17sp"
-        android:backgroundTint="#FF6D00"
-        android:layout_marginTop="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/fourPlayerButton"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:text="4 игрока"
-        android:textSize="17sp"
-        android:backgroundTint="#DD2C00"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/threePlayerButton" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
