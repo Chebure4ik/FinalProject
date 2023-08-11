@@ -17,6 +17,7 @@ public class PlayActivity extends AppCompatActivity {
     private TextView textView, questionsOut;
     private Button firstOption, secondOption, thirdOption;
     private int playerAnswer = 0;
+    WinActivity winActivity;
     private int a = -1;
     private int playerTurn = 1;
     final Random random = new Random();
@@ -84,7 +85,8 @@ public class PlayActivity extends AppCompatActivity {
                 play();
             }
             else if (usedQuestions.size() == 52){
-                questionsOut.setText("вопросы нетов");
+                Intent intent = new Intent(getApplicationContext(), LoseActivity.class);
+                startActivity(intent);
             }
         }
         else{
