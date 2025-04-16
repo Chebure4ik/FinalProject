@@ -5,16 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gardient_first"
-    tools:context=".SelectionActivity">
+    tools:context=".DifficultyActivity">
+
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/header2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Главное меню"
-        android:textColor="#FFFFFF"
-        android:textSize="28sp"
-        android:gravity="center"
+        android:text="ВЫБЕРИТЕ СЛОЖНОСТЬ"
+        android:textSize="23sp"
         android:textStyle="bold"
         android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,40 +21,52 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/toPlayButton"
+        android:id="@+id/playEasy"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:text="Начать Викторину"
-        android:textStyle="bold"
-        android:backgroundTint="#FFD600"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/someFactsButton"
+        android:backgroundTint="#00D156"
+        android:text="Интересующийся"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/playNormal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/someFactsButton"
+        android:id="@+id/playNormal"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:text="Интересные факты"
-        android:backgroundTint="#FFD600"
-        android:textStyle="bold"
         android:layout_marginTop="150dp"
+        android:backgroundTint="#FFD600"
+        android:text="Знающий"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/statisticsButton"
+        android:id="@+id/playHard"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:text="Статистика"
-        android:textStyle="bold"
-        android:backgroundTint="#FFD600"
         android:layout_marginTop="10dp"
+        android:text="Продвинутый"
+        android:textStyle="bold"
+        android:backgroundTint="#F43100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/someFactsButton" />
+        app:layout_constraintTop_toBottomOf="@+id/playNormal" />
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="#FFD600"
+        android:contentDescription="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

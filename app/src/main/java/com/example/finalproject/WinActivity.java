@@ -13,7 +13,7 @@ public class WinActivity extends AppCompatActivity {
 
     TextView textView;
     Button buttonExit, buttonRestart;
-    int firstPlayer, secondPlayer, thirdPlayer, fourthPlayer;
+    int firstPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,18 +49,6 @@ public class WinActivity extends AppCompatActivity {
         Bundle winner = getIntent().getExtras();
 
         firstPlayer = Integer.parseInt(winner.get("point1").toString());
-        secondPlayer = Integer.parseInt(winner.get("point2").toString());
-        thirdPlayer = Integer.parseInt(winner.get("point3").toString());
-        fourthPlayer = Integer.parseInt(winner.get("point4").toString());
-
-        if(firstPlayer >= 12){
-            textView.setText("Победил игрок " + winner.get("name1").toString());
-        } else if (secondPlayer >= 12) {
-            textView.setText("Победил игрок " + winner.get("name2").toString());
-        } else if (thirdPlayer >= 12) {
-            textView.setText("Победил игрок " + winner.get("name3").toString());
-        } else if (fourthPlayer >= 12) {
-            textView.setText("Победил игрок " + winner.get("name4").toString());
-        }
+        textView.setText("Вы правильно ответили на "+ firstPlayer);
     }
 }

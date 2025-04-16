@@ -25,13 +25,13 @@
             android:name=".PlayActivity"
             android:exported="false" />
         <activity
-            android:name=".FourthActivity"
+            android:name=".StatisticsActivity"
             android:exported="false" />
         <activity
-            android:name=".ThirdActivity"
+            android:name=".FactsActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".DifficultyActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

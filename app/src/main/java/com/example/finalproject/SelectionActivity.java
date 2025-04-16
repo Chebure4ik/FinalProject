@@ -9,20 +9,20 @@ import android.widget.Button;
 
 public class SelectionActivity extends AppCompatActivity {
 
-    private Button twoPlayerButton, threePlayerButton, fourPlayerButton;
+    private Button toPlayButton, someFactsButton, statisticsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
-        twoPlayerButton = findViewById(R.id.twoPlayerButton);
-        threePlayerButton = findViewById(R.id.threePlayerButton);
-        fourPlayerButton = findViewById(R.id.fourPlayerButton);
+        toPlayButton = findViewById(R.id.toPlayButton);
+        someFactsButton = findViewById(R.id.someFactsButton);
+        statisticsButton = findViewById(R.id.statisticsButton);
 
-        twoPlayerButton.setOnClickListener(listener);
-        threePlayerButton.setOnClickListener(listener);
-        fourPlayerButton.setOnClickListener(listener);
+        toPlayButton.setOnClickListener(listener);
+        someFactsButton.setOnClickListener(listener);
+        statisticsButton.setOnClickListener(listener);
 
     }
 
@@ -31,17 +31,14 @@ public class SelectionActivity extends AppCompatActivity {
         public void onClick(View view) {
 
             switch (view.getId()){
-                case R.id.twoPlayerButton:
-                    Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                    startActivity(intent);
+                case R.id.toPlayButton:
+                    startActivity(new Intent(SelectionActivity.this, DifficultyActivity.class));
                     break;
-                case R.id.threePlayerButton:
-                    intent = new Intent(getApplicationContext(), ThirdActivity.class);
-                    startActivity(intent);
+                case R.id.someFactsButton:
+                    startActivity(new Intent(SelectionActivity.this, FactsActivity.class));
                     break;
-                case R.id.fourPlayerButton:
-                    intent = new Intent(getApplicationContext(), FourthActivity.class);
-                    startActivity(intent);
+                case R.id.statisticsButton:
+                    startActivity(new Intent(SelectionActivity.this, StatisticsActivity.class));
                     break;
             }
         }

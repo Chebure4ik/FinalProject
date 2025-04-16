@@ -7,35 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
-public class FourthActivity extends AppCompatActivity {
+public class StatisticsActivity extends AppCompatActivity {
     private EditText nameIn1, nameIn2, nameIn3, nameIn4;
     private Button playButton;
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fourth);
+        setContentView(R.layout.activity_statistics);
 
-        nameIn1 = findViewById(R.id.nameIn1);
-        nameIn2 = findViewById(R.id.nameIn2);
-        nameIn3 = findViewById(R.id.nameIn3);
-        nameIn4 = findViewById(R.id.nameIn4);
-        playButton = findViewById(R.id.playButton);
-
-        playButton.setOnClickListener(listener);
+        backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(listener);
     }
     private View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(getApplicationContext(), PlayActivity.class);
-
-            intent.putExtra("nameIn1", nameIn1.getText().toString());
-            intent.putExtra("nameIn2", nameIn2.getText().toString());
-            intent.putExtra("nameIn3", nameIn3.getText().toString());
-            intent.putExtra("nameIn4", nameIn4.getText().toString());
-
-            startActivity(intent);
+            startActivity(new Intent(StatisticsActivity.this,SelectionActivity.class));
         }
     };
 

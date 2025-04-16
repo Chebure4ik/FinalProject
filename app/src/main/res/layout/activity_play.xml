@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gardient_first"
     tools:context=".PlayActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
         android:gravity="center"
-        android:text="ХОД ИГРОКА САНЯ"
+        android:text="0 из 12"
         android:textSize="23sp"
         android:textStyle="bold"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/questionsOut"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -41,6 +40,7 @@
         android:layout_marginBottom="10dp"
         android:backgroundTint="#FFAB00"
         android:text="1-Й ВАРИАНТ"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/secondOption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,6 +52,7 @@
         android:layout_marginBottom="150dp"
         android:backgroundTint="#FF6D00"
         android:text="2-Й ВАРИАНТ"
+        android:textStyle="bold"
         android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,4 +69,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondOption" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:max="12"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/questionsOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
