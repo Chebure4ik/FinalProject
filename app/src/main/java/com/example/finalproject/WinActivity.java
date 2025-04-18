@@ -49,6 +49,6 @@ public class WinActivity extends AppCompatActivity {
         Bundle winner = getIntent().getExtras();
 
         firstPlayer = Integer.parseInt(winner.get("point1").toString());
-        textView.setText("Вы правильно ответили на "+ firstPlayer);
+        textView.setText("🏆Количество правильных ответов: "+ firstPlayer);
     }
 }

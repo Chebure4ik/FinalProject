@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 public class DifficultyActivity extends AppCompatActivity {
     private Button playEasy, playNormal, playHard;
     private ImageButton backButton;
+    public int difficulty = 1;
 
 
     @Override
@@ -33,13 +34,16 @@ public class DifficultyActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.playEasy:
-                    startActivity(new Intent(DifficultyActivity.this, PlayActivity.class));
+                    difficulty = 1;
+                    startActivity(new Intent(DifficultyActivity.this,PlayActivity.class));
                     break;
                 case R.id.playNormal:
-                    startActivity(new Intent(DifficultyActivity.this, PlayActivity.class));
+                    difficulty = 2;
+                    startActivity(new Intent(DifficultyActivity.this,PlayActivity.class));
                     break;
                 case R.id.playHard:
-                    startActivity(new Intent(DifficultyActivity.this, PlayActivity.class));
+                    difficulty = 3;
+                    startActivity(new Intent(DifficultyActivity.this,PlayActivity.class));
                     break;
                 case R.id.backButton:
                     startActivity(new Intent(DifficultyActivity.this, SelectionActivity.class));

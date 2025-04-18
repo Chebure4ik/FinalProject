@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class SelectionActivity extends AppCompatActivity {
 
     private Button toPlayButton, someFactsButton, statisticsButton;
+    private ImageButton buttonLeave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +21,12 @@ public class SelectionActivity extends AppCompatActivity {
         toPlayButton = findViewById(R.id.toPlayButton);
         someFactsButton = findViewById(R.id.someFactsButton);
         statisticsButton = findViewById(R.id.statisticsButton);
+        buttonLeave = findViewById(R.id.buttonLeave);
 
         toPlayButton.setOnClickListener(listener);
         someFactsButton.setOnClickListener(listener);
         statisticsButton.setOnClickListener(listener);
+        buttonLeave.setOnClickListener(listener);
 
     }
 
@@ -39,6 +43,12 @@ public class SelectionActivity extends AppCompatActivity {
                     break;
                 case R.id.statisticsButton:
                     startActivity(new Intent(SelectionActivity.this, StatisticsActivity.class));
+                    break;
+                case R.id.buttonLeave:
+                    Intent i = new Intent(Intent.ACTION_MAIN);
+                    i.addCategory(Intent.CATEGORY_HOME);
+                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(i);
                     break;
             }
         }

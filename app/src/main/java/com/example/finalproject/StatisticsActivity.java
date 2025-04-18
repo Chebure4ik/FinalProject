@@ -8,16 +8,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class StatisticsActivity extends AppCompatActivity {
-    private EditText nameIn1, nameIn2, nameIn3, nameIn4;
-    private Button playButton;
     private ImageButton backButton;
-
+    private TextView textView5, textView6, textView7, textView8;
+    private ProgressBar progressBar2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_statistics);
+
+        textView5 = findViewById(R.id.textView5);
+        textView6 = findViewById(R.id.textView6);
+        textView7 = findViewById(R.id.textView7);
+        textView8 = findViewById(R.id.textView8);
+        progressBar2 = findViewById(R.id.progressBar2);
 
         backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(listener);
@@ -28,36 +35,4 @@ public class StatisticsActivity extends AppCompatActivity {
             startActivity(new Intent(StatisticsActivity.this,SelectionActivity.class));
         }
     };
-
-    public EditText getNameIn1() {
-        return nameIn1;
-    }
-
-    public void setNameIn1(EditText nameIn1) {
-        this.nameIn1 = nameIn1;
-    }
-
-    public EditText getNameIn2() {
-        return nameIn2;
-    }
-
-    public void setNameIn2(EditText nameIn2) {
-        this.nameIn2 = nameIn2;
-    }
-
-    public EditText getNameIn3() {
-        return nameIn3;
-    }
-
-    public void setNameIn3(EditText nameIn3) {
-        this.nameIn3 = nameIn3;
-    }
-
-    public EditText getNameIn4() {
-        return nameIn4;
-    }
-
-    public void setNameIn4(EditText nameIn4) {
-        this.nameIn4 = nameIn4;
-    }
 }
